@@ -1,3 +1,56 @@
 <div class="ngulator">
   <h1>ngulator</h1>
+  <div>
+
+    <textarea class="result" type="text" readonly value="{{ result }}"></textarea>
+    
+    </div>
+    
+    <button class="responsive clear" (click)="clearMyScr()">
+    
+      {{ clearButton }}
+    
+    </button>
+    
+    <button class="responsive" *ngFor="let number of numbers" (click)="operate(number)">
+    
+      {{ number }}
+    
+    </button>
+    
+    <button class="responsive" (click)="setOperator('+')">
+    
+      +
+    
+    </button>
+    
+    <button class="responsive" (click)="setOperator('-')">
+    
+      -
+    
+    </button>
+    
+    <button class="responsive" (click)="setOperator('*')">
+    
+      *
+    
+    </button>
+    
+    <button class="responsive"(click)="setOperator('/')">
+    
+      /
+    
+    </button>
+    
+    <button class="responsive clear" (click)="executeOp()">
+    
+      {{ execute }}
+    
+    </button>
+    
+    <div>
+    
+      <p class="qq">Calculating was never this easy!</p>
+    
+    </div>
 </div>

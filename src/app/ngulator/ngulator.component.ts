@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-ngulator',
+  selector: 'ngulator',
   templateUrl: './ngulator.component.html',
   styleUrls: ['./ngulator.component.css']
 })

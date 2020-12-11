@@ -85,8 +85,6 @@ export class NgulatorComponent{
     }
     if (this.nums.length == 2 && this.operator) {
       this.runMe = true;
-    } else {
-      this.executeOp();
     }
   }
 }

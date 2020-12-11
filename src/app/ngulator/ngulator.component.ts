@@ -82,7 +82,6 @@ export class NgulatorComponent{
     if (this.nums.length != 2 || this.counter != 3) {
       this.setError();
     }
-    console.log(this.screen);
     if (this.nums.length == 2 && this.operator) {
       this.runMe = true;
     } else {

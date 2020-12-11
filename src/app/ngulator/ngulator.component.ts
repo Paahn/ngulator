@@ -25,6 +25,7 @@ export class NgulatorComponent{
 
   setError() {
     this.result = 'ERROR';
+    setTimeout(() => this.clearMyScreen(), 1500);
   }
 
   setOperator(value: string) {

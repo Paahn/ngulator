@@ -28,30 +28,8 @@ export class NgulatorComponent{
   setOperator(value: string) {
     this.screen(value);
     this.operator = value;
-    console.log(this.operator);
-    console.log(this.screen(value));
   };
 
-  // executeOp(){
-  //   switch (this.operator) {
-  //     case '+': {
-  //       this.result = (this.add(this.nums[0], this.nums[1])).toString();
-  //       break;
-  //     }
-  //     case '-': {
-  //       this.result = (this.subtract(this.nums[0], this.nums[1])).toString();
-  //       break;
-  //     }
-  //     case '*': {
-  //       this.result = (this.divide(this.nums[0], this.nums[1])).toString();
-  //       break;
-  //     }
-  //     case '/': {
-  //       this.result = (this.multiply(this.nums[0], this.nums[1])).toString();
-  //       break;
-  //     }
-  //   };
-  // };
 
   executeOp(){
     if (this.operator == '+') {
@@ -96,7 +74,6 @@ export class NgulatorComponent{
   operate(number) {
     this.screen(number);
     this.nums.push(number);
-    console.log(number);
 
     if (this.operator == '') return;
     if (this.nums.length != 2) {

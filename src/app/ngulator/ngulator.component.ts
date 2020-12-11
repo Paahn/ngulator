@@ -26,6 +26,48 @@ export class NgulatorComponent{
     console.log(this.screen(value));
   }
 
+  executeOp(){
+    switch (this.operator) {
+      case '+': {
+        this.result = (this.add(this.nums[0], this.nums[1])).toString();
+        break;
+      }
+      case '-': {
+        this.result = (this.subtract(this.nums[0], this.nums[1])).toString();
+        break;
+      }
+      case '*': {
+        this.result = (this.divide(this.nums[0], this.nums[1])).toString();
+        break;
+      }
+      case '/': {
+        this.result = (this.multiply(this.nums[0], this.nums[1])).toString();
+        break;
+      }
+    };
+  };
+  
+  add(a, b) {
+    a = parseInt(a);
+    b = parseInt(b);
+    return a + b;
+  };
+  subtract(a, b) {
+    a = parseInt(a);
+    b = parseInt(b);
+    return a - b;
+  };
+  divide(a, b) {
+    a = parseInt(a);
+    b = parseInt(b);
+    return a / b;
+  };
+  multiply(a, b) {
+    a = parseInt(a);
+    b = parseInt(b);
+    return a * b;
+  };
+
   screen(expression) {
     this.result += expression.toString();
   }

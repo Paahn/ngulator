@@ -14,11 +14,13 @@ export class NgulatorComponent{
   operators: string[] = ['+', '-', '*', '/'];
   execute: string = '=';
   runMe: boolean = false;
+  counter: number = 0;
 
   clearMyScreen() {
     this.result = '';
     this.nums = [];
     this.operator = '';
+    this.counter = 0;
   };
 
   setError() {
@@ -69,6 +71,7 @@ export class NgulatorComponent{
 
   screen(expression) {
     this.result += expression.toString();
+    this.counter += 1;
   };
 
   operate(number) {
@@ -76,9 +79,10 @@ export class NgulatorComponent{
     this.nums.push(number);
 
     if (this.operator == '') return;
-    if (this.nums.length != 2) {
+    if (this.nums.length != 2 || this.counter != 3) {
       this.setError();
     }
+    console.log(this.screen);
     if (this.nums.length == 2 && this.operator) {
       this.runMe = true;
     } else {

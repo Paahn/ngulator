@@ -32,26 +32,38 @@ export class NgulatorComponent{
     console.log(this.screen(value));
   };
 
+  // executeOp(){
+  //   switch (this.operator) {
+  //     case '+': {
+  //       this.result = (this.add(this.nums[0], this.nums[1])).toString();
+  //       break;
+  //     }
+  //     case '-': {
+  //       this.result = (this.subtract(this.nums[0], this.nums[1])).toString();
+  //       break;
+  //     }
+  //     case '*': {
+  //       this.result = (this.divide(this.nums[0], this.nums[1])).toString();
+  //       break;
+  //     }
+  //     case '/': {
+  //       this.result = (this.multiply(this.nums[0], this.nums[1])).toString();
+  //       break;
+  //     }
+  //   };
+  // };
+
   executeOp(){
-    switch (this.operator) {
-      case '+': {
-        this.result = (this.add(this.nums[0], this.nums[1])).toString();
-        break;
-      }
-      case '-': {
-        this.result = (this.subtract(this.nums[0], this.nums[1])).toString();
-        break;
-      }
-      case '*': {
-        this.result = (this.divide(this.nums[0], this.nums[1])).toString();
-        break;
-      }
-      case '/': {
-        this.result = (this.multiply(this.nums[0], this.nums[1])).toString();
-        break;
-      }
-    };
-  };
+    if (this.operator == '+') {
+      this.result = (this.add(this.nums[0], this.nums[1])).toString();
+    } else if (this.operator == "-") {
+      this.result = (this.subtract(this.nums[0], this.nums[1])).toString();
+    } else if (this.operator == "/") {
+      this.result = (this.divide(this.nums[0], this.nums[1])).toString();
+    } else if (this.operator == "*") {
+      this.result = (this.multiply(this.nums[0], this.nums[1])).toString();
+    }
+  }
 
   add(a, b) {
     a = parseInt(a);

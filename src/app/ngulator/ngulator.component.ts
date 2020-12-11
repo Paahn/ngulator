@@ -12,11 +12,17 @@ export class NgulatorComponent{
   clearButton: string = 'clear';
   numbers: string[] = ['9', '0', '5', '6', '7', '8', '1', '2', '3', '4'];
   operators: string[] = ['+', '-', '*', '/'];
+  execute: string = '=';
+  runMe: boolean = false;
 
   clearMyScreen() {
     this.result = '';
     this.nums = [];
     this.operator = '';
+  };
+
+  setError() {
+    this.result = 'ERROR';
   }
 
   setOperator(value: string) {
@@ -24,7 +30,7 @@ export class NgulatorComponent{
     this.operator = value;
     console.log(this.operator);
     console.log(this.screen(value));
-  }
+  };
 
   executeOp(){
     switch (this.operator) {
@@ -64,7 +70,7 @@ export class NgulatorComponent{
     b = parseInt(b);
     return parseFloat((a / b).toFixed(6));
   };
-  
+
   multiply(a, b) {
     a = parseInt(a);
     b = parseInt(b);
@@ -73,5 +79,21 @@ export class NgulatorComponent{
 
   screen(expression) {
     this.result += expression.toString();
+  };
+
+  operate(number) {
+    this.screen(number);
+    this.nums.push(number);
+    console.log(number);
+
+    if (this.operator == '') return;
+    if (this.nums.length != 2) {
+      this.setError();
+    }
+    if (this.nums.length == 2 && this.operator) {
+      this.runMe = true;
+    } else {
+      this.executeOp();
+    }
   }
 }

@@ -46,22 +46,25 @@ export class NgulatorComponent{
       }
     };
   };
-  
+
   add(a, b) {
     a = parseInt(a);
     b = parseInt(b);
     return a + b;
   };
+
   subtract(a, b) {
     a = parseInt(a);
     b = parseInt(b);
     return a - b;
   };
+
   divide(a, b) {
     a = parseInt(a);
     b = parseInt(b);
-    return a / b;
+    return parseFloat((a / b).toFixed(6));
   };
+  
   multiply(a, b) {
     a = parseInt(a);
     b = parseInt(b);

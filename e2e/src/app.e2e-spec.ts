@@ -8,9 +8,29 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should have a plus button', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to ngulator!');
+    expect(page.getPlusOperator()).toEqual('+');
+  });
+
+  it('should have a minus button', () => {
+    page.navigateTo();
+    expect(page.getMinusOperator()).toEqual('-');
+  });
+
+  it('should have a multiple button', () => {
+    page.navigateTo();
+    expect(page.getMultiplyOperator()).toEqual('*');
+  });
+
+  it('should have a divide button', () => {
+    page.navigateTo();
+    expect(page.getdivideOperator()).toEqual('/');
+  });
+
+  it('should display webapp title', () => {
+    page.navigateTo();
+    expect(page.getTitleText()).toEqual('My calculator, the ngulator!');
   });
 
   afterEach(async () => {

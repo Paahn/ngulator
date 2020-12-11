@@ -25,7 +25,7 @@ describe('workspace-project App', () => {
 
   it('should have a divide button', () => {
     page.navigateTo();
-    expect(page.getdivideOperator()).toEqual('/');
+    expect(page.getDivideOperator()).toEqual('/');
   });
 
   it('should display webapp title', () => {

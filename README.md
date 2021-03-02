@@ -1,6 +1,7 @@
 
-The ngulator is a calculator made to specifically perform calculations between 2 single-digit integer numbers. To operate the calculator, select the numbers and operator, and hit the '='. Please select the 'clear' button after every calculation is completed, to perform another calculation.
----
+The ngulator is a calculator made to specifically perform calculations between 2 single-digit integer numbers. Any other calculation attempt will result in error.
+
+To operate the calculator, select the numbers and operator, and hit the '='. Please select the 'clear' button after every calculation is completed, to perform another calculation.
 
 ## Development server
 

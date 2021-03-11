@@ -3,6 +3,10 @@ The ngulator is a calculator made to specifically perform calculations between 2
 
 To operate the calculator, select the numbers and operator, and hit the '='. Please select the 'clear' button after every calculation is completed, to perform another calculation.
 
+[Live project](https://ngulator-e582e.firebaseapp.com/)
+
+![Preview](https://raw.githubusercontent.com/Paahn/ngulator/master/cover.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

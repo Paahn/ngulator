@@ -1,3 +1,4 @@
+## Ngulator functionality
 
 The ngulator is a calculator made to specifically perform calculations between 2 single-digit integer numbers. Any other calculation attempt will result in error.
 

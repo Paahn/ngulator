@@ -15,12 +15,14 @@ export class NgulatorComponent{
   execute: string = '=';
   runMe: boolean = false;
   counter: number = 0;
+  operatorCounter: number = 0;
 
   clearMyScreen() {
     this.result = '';
     this.nums = [];
     this.operator = '';
     this.counter = 0;
+    this.operatorCounter = 0;
   };
 
   setError() {
@@ -29,8 +31,11 @@ export class NgulatorComponent{
   }
 
   setOperator(value: string) {
-    this.screen(value);
     this.operator = value;
+    if (this.operatorCounter < 1) {
+      this.screen(value);
+      this.operatorCounter++;
+    }
   };
 
 

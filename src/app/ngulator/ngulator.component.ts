@@ -31,8 +31,8 @@ export class NgulatorComponent{
   }
 
   setOperator(value: string) {
-    this.operator = value;
     if (this.operatorCounter < 1) {
+      this.operator = value;
       this.screen(value);
       this.operatorCounter++;
     }

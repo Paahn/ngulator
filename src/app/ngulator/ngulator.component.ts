@@ -6,18 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./ngulator.component.css']
 })
 export class NgulatorComponent{
-  operator: string = '';
-  result: string = '';
-  nums: string[] = [];
-  clearButton: string = 'clear';
-  numbers: string[] = ['9', '0', '5', '6', '7', '8', '1', '2', '3', '4'];
-  operators: string[] = ['+', '-', '*', '/'];
-  execute: string = '=';
-  runMe: boolean = false;
-  counter: number = 0;
-  operatorCounter: number = 0;
+  private operator: string = '';
+  public result: string = '';
+  private nums: string[] = [];
+  public clearButton: string = 'clear';
+  public numbers: string[] = ['9', '0', '5', '6', '7', '8', '1', '2', '3', '4'];
+  private operators: string[] = ['+', '-', '*', '/'];
+  public execute: string = '=';
+  private counter: number = 0;
+  private operatorCounter: number = 0;
 
-  clearMyScreen() {
+  public clearMyScreen() {
     this.result = '';
     this.nums = [];
     this.operator = '';
@@ -25,12 +24,12 @@ export class NgulatorComponent{
     this.operatorCounter = 0;
   };
 
-  setError() {
+  private setError() {
     this.result = 'ERROR';
     setTimeout(() => this.clearMyScreen(), 1500);
   }
 
-  setOperator(value: string) {
+  public setOperator(value: string) {
     if (this.operatorCounter < 1) {
       this.operator = value;
       this.screen(value);
@@ -39,7 +38,7 @@ export class NgulatorComponent{
   };
 
 
-  executeOp(){
+  public executeOp(){
     if (this.operator == '+') {
       this.result = (this.add(this.nums[0], this.nums[1])).toString();
     } else if (this.operator == "-") {
@@ -51,36 +50,36 @@ export class NgulatorComponent{
     }
   }
 
-  add(a, b) {
+  private add(a, b) {
     a = parseInt(a);
     b = parseInt(b);
     return a + b;
   };
 
-  subtract(a, b) {
+  private subtract(a, b) {
     a = parseInt(a);
     b = parseInt(b);
     return a - b;
   };
 
-  divide(a, b) {
+  private divide(a, b) {
     a = parseInt(a);
     b = parseInt(b);
     return parseFloat((a / b).toFixed(6));
   };
 
-  multiply(a, b) {
+  private multiply(a, b) {
     a = parseInt(a);
     b = parseInt(b);
     return a * b;
   };
 
-  screen(expression) {
+  private screen(expression) {
     this.result += expression.toString();
     this.counter += 1;
   };
 
-  operate(number) {
+  public operate(number) {
     this.screen(number);
     this.nums.push(number);
 

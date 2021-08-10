@@ -11,9 +11,7 @@ export class NgulatorComponent{
   private nums: string[] = [];
   public clearButton: string = 'clear';
   public numbers: string[] = ['9', '0', '5', '6', '7', '8', '1', '2', '3', '4'];
-  private operators: string[] = ['+', '-', '*', '/'];
   public execute: string = '=';
-  // private runMe: boolean = false;
   private counter: number = 0;
   private operatorCounter: number = 0;
 

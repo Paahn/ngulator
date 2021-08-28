@@ -30,7 +30,7 @@ describe('workspace-project App', () => {
 
   it('should display webapp title', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('My calculator, the ngulator!');
+    expect(page.getTitleText()).toEqual('My Calculator, the ngulator!');
   });
 
   afterEach(async () => {
